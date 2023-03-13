@@ -4,13 +4,23 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'Fetch',
+    name: 'FetchView',
     component: () => import('../views/FetchView.vue')
   },
   {
     path: '/axios',
-    name: 'Axios',
+    name: 'AxiosView',
     component: () => import( '../views/AxiosView.vue')
+  },
+  {
+    path: '/updateFetch',
+    name: 'UpdateDataFetch',
+    component: () => import( '../views/UpdateDataFetchView.vue')
+  },
+  {
+    path: '/updateAxios',
+    name: 'UpdateDataAxios',
+    component: () => import( '../views/UpdateDataAxiosView.vue')
   }
 ]
 
@@ -20,3 +30,4 @@ const router = createRouter({
 })
 
 export default router
+

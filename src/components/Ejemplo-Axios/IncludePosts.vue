@@ -17,11 +17,9 @@
       <button>Create Post</button>
     </form>
 
-    <template v-for="value in formData" :key="value">
-          <h3>{{ value.title }}</h3>
-          <p>{{ value.body }}</p>
-                {{ value }} 
-    </template>
+    <div v-for="value in formData" :key="value">
+               <p> {{ value }} </p> 
+    </div>
   </div>
 </template>
 
@@ -45,7 +43,7 @@ setup(){
 
      const createPost = () => {
       axios
-        .post('https://jsonplaceholder.typicode.com/posts', formData)
+        .post('https://jsonplaceholder.typicode.com/posts', formData.value)
         .then((response) => {
           console.log(response)
         })
@@ -54,10 +52,12 @@ setup(){
           errorMsg.value = 'Error no se cargo la data'
         }) 
     } 
-
-    formData,
+    
+return{
+  formData,
     createPost
 }
+} 
 }
 
 </script>

@@ -30,10 +30,12 @@ export default {
           errorMsg.value = 'Error no se cargo la data'
         }) */
 
-    const getData  = async () => {
-    const response =  await axios.get('https://jsonplaceholder.typicode.com/posts') 
-          posts.value = await response.data
-    }
+      const getData  = async () => {
+      const response =  await axios.get('https://jsonplaceholder.typicode.com/posts') 
+            posts.value = await response.data
+      }
+
+    getData();
 
     return{
       posts,

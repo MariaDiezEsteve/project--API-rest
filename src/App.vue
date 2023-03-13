@@ -1,7 +1,9 @@
 <template>
   <nav>
     <router-link to="/">Fetch</router-link> |
-    <router-link to="/axios">Axios</router-link>
+    <router-link to="/axios">Axios</router-link> |
+    <router-link to="/updateFetch">Update Fetch</router-link> |
+    <router-link to="/updateAxios">Update Axios</router-link>
   </nav>
   <router-view/>
 </template>
